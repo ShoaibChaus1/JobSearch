@@ -1,0 +1,302 @@
+.main
+{
+    width: 100%;
+  
+    background-color: rgb(224, 224, 224);
+}
+
+h1{
+    margin-top: 6vw;
+    background: linear-gradient( rgba(14, 14, 207, 0.683),rgb(30, 225, 212));
+    color: transparent;
+    -webkit-background-clip: text;
+    
+}
+.form
+{
+    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin-bottom:3vw ;
+}
+
+form{
+   
+    width: 90%;
+    
+}
+form .data
+{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3vw;
+    margin: 1vw;
+    border: 2px solid white;
+    border-radius: 0.5vw;
+    box-shadow: 0 0  2vw white;
+    background-color: white;
+    
+    height: 5em;
+    padding: 2px;
+   
+}
+
+form .data1
+{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3vw;
+    margin: 1vw;
+    border: 2px solid white;
+    border-radius: 0.5vw;
+    box-shadow: 0 0  2vw white;
+    background-color: white;
+    
+    height: 5vw;
+    padding: 2px;
+   
+}
+
+form .data label{
+    margin-left: 2vw;
+    width: 20%;
+   
+}
+form .data1 label{
+    margin-left: 2vw;
+    width: 20%;
+   
+}
+
+a{
+ text-decoration: none;   
+ color: black;
+ 
+ position: relative;
+}
+
+a::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: red;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+}
+
+a:hover::after
+{
+    width: 100%;
+}
+
+form .data .inp{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form .data1 .inp{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.inp input
+{
+   
+   width: 80%;
+   height: 2.5vw;
+   border-radius: 0.5vw;
+   border: 1px solid blue;
+  outline-color: blue;
+  text-align: center;
+  padding: 2px;
+   
+}
+
+.inp textarea
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 90%;
+   height: 12.8vh;
+   border-radius: 0.5vw;
+   border: 1px solid blue;
+  outline-color: blue;
+  padding: 2px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.hr
+{
+    width: 3px;
+    height: 2vw;
+    background-color: red;
+}
+
+#btn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+    margin-bottom: 3vw;
+}
+
+#btn button
+{
+    padding: 5px;
+    width: 20vw;
+    height: 6vh;
+    border-radius: 8px;
+    background-color:white;
+    border: 0;
+   
+    transition: width 0.5s;
+}
+
+#btn button:hover
+{
+    box-shadow: 0 0 20px white;
+    transform: scale(1.03);
+}
+
+#desc
+{
+    height: 20vh;
+}
+
+.err
+{
+    margin-left: 0.5vw;
+    color: red;
+}
+
+.data ul{
+    margin-left: 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+   
+    
+}
+.data ul li{
+    list-style-type: none;
+    border: 2px solid blue;
+    padding:0.6vw 2vw;
+    border-radius: 0.5vw;
+    background-color: lightblue;
+   
+}
+
+.data1 .expsal
+{
+
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    
+}
+
+p{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.data2
+{
+    display: none;
+}
+
+
+
+
+@media (max-width:600px) 
+{
+   form .data{
+        
+       height: 3em;
+    }
+
+    .inp input
+    {
+        height: 2em;
+        border-radius: 0.4em;
+    }
+
+    form .data1
+    {
+        display: none;
+    }
+
+    .data2
+    {
+        display: flex;
+        flex-direction: column;
+       
+        padding: 1vw;
+        gap: 2vw;
+       
+    }
+
+    .cat
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        background-color: white;
+        width: 100%;
+        box-shadow: 0 0 2vw white;
+    }
+
+    .inp
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+    }
+
+    .cat label
+    {
+        width: 20%;
+       
+        padding: 2vw;
+
+    }
+
+    
+
+   
+
+    
+    
+    
+}
+
+

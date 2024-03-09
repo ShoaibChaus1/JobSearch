@@ -1,0 +1,155 @@
+<div class="main">
+    <div class="form">
+        <div>
+            <h1>Upload Job</h1>
+        </div>
+        <form [formGroup]="myForm">
+            <div class="data">
+                <label for="jobTitle"> <a href="">Job Title</a> </label>
+
+                <div class="inp">
+                    <input type="text" formControlName="jobTitle" placeholder="Please Enter Your Job Title Here..">
+                    <span class="err"
+                        *ngIf="this.myForm.controls['jobTitle'].touched && this.myForm.controls['jobTitle'].hasError('required')">
+                        Job Title is Required </span>
+                </div>
+
+            </div>
+            <div class="data">
+                <label for="companyName"> <a href="">Company Name</a> </label>
+                <div class="inp">
+                    <input type="text" formControlName="companyName" id="companyName"
+                        placeholder="Please Entere Your Company Name Here">
+                    <span class="err"
+                        *ngIf="this.myForm.controls['companyName'].touched && this.myForm.controls['companyName'].hasError('required')">
+                        Company Name is Required </span>
+                </div>
+
+            </div>
+
+           
+                <div class="data1">
+                    <div class="expsal">
+                        <label for="jobExperiance"> <a href="">Experiance</a> </label>
+                        <div class="inp">
+                            <input type="range" min="0" max="50" formControlName="jobExperiance">
+                            <p>
+                                {{myForm.value['jobExperiance']}}
+                            </p>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="hr"></div>
+
+                    <div class="expsal">
+                        <label for="jobSalary"> <a href="">Salary P/M</a> </label>
+                        <div class="inp">
+                            <input type="range" set="0" min="0" max="200000" formControlName="jobSalary">
+                            <p> {{myForm.value['jobSalary']}} </p>
+                        </div>
+                    </div>
+                </div>
+          
+
+            <div id="desc" class="data">
+                <label for="jobDescription"> <a href="">Description</a> </label>
+
+                <div class="inp">
+                    <textarea type="text" formControlName="jobDescription"
+                        placeholder="Please Enter Breif about The Job">
+                    </textarea>
+                </div>
+
+            </div>
+
+
+            <!-- hidden For Pc Only for SmartPhones -->
+            <div class="data2">
+
+                <div class="cat">
+                    <label for="jobExperiance"> <a href="">Experiance</a> </label>
+                    <div class="inp">
+                        <input type="range" min="0" max="50" formControlName="jobExperiance">
+                        <p>
+                            {{myForm.value['jobExperiance']}}
+                        </p>
+                        <span></span>
+                    </div>
+                </div>
+                
+
+                <div class="cat">
+                    <label for="jobSalary"> <a href="">Salary P/M</a> </label>
+                    <div class="inp">
+                        <input type="range" set="0" min="0" max="200000" formControlName="jobSalary">
+                        <p> {{myForm.value['jobSalary']}} </p>
+                    </div>
+                </div>
+
+                <div class="cat">
+                    <label for="skill"> <a href="">Skills</a> </label>
+                    <div [formGroup]="mform" class="inp">
+                        <input type="text" formControlName="jobSkills"
+                            placeholder="Please Enter Required Skills and Press Enter"> <button
+                            (click)="addSkill()"></button>
+
+                    </div>
+                </div>
+
+                
+                
+
+                <div class="cat">
+                    <label for="jobLocation"><a href="">City </a> </label>
+                    <div class="inp">
+                        <input type="text" formControlName="jobLocation" placeholder="Please Enter City Name">
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="data1">
+                <div class="expsal">
+                    <label for="skill"> <a href="">Skills</a> </label>
+                    <div [formGroup]="mform" class="inp">
+                        <input type="text" formControlName="jobSkills"
+                            placeholder="Please Enter Required Skills and Press Enter"> <button
+                            (click)="addSkill()"></button>
+
+                    </div>
+                </div>
+
+                <div class="hr"></div>
+
+                <div class="expsal">
+                    <label for="jobLocation"><a href="">City </a> </label>
+                    <div class="inp">
+                        <input type="text" formControlName="jobLocation" placeholder="Please Enter City Name">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="data" *ngIf="Job.jobSkills.length>0">
+                <ul>
+                    <li *ngFor="let i of Job.jobSkills"> {{i}} </li>
+                </ul>
+
+            </div>
+            <!-- <ul>
+                <li *ngFor="let skill of skills">{{skill}}</li>
+            </ul> -->
+
+            <div id="btn">
+                <button type="submit" [disabled]="myForm.invalid" (click)="addJob()">Add Job</button>
+            </div>
+
+
+        </form>
+    </div>
+
+
+</div>

@@ -1,0 +1,64 @@
+
+<div  class="main">
+
+    <div class="filters">
+
+    </div>
+
+
+    <button (click)="searchJob()">Search Job</button>
+    <div class="item"  *ngFor="let i of Jobs">
+        
+        <div class="item-box">
+         <p id="title"> {{i.jobTitle}} </p>
+         <p id="cname"> {{i.companyName}} </p>
+        <div class="sec">
+            <div class="line">
+                <div class="img"><img [src]="images[0][0].path" alt=""></div>
+                <div class="title"> {{i.jobExperiance}} </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="line">
+                <div class="img"><img [src]="images[0][3].path" alt=""></div>
+                <div class="title"> {{i.jobSalary}} </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="line">
+                <div class="img"><img [src]="images[0][1].path" alt=""></div>
+                <div class="title"> {{i.jobLocation}} </div>
+            </div>
+        </div>
+        <div class="desc">
+            <div class="img"><img [src]="images[0][2].path" alt=""></div>
+            <div class="title"   >  {{i.jobDescription.substring(0,80)}}... </div>
+            <p ></p>
+        </div>
+         
+        <div class="skill">
+            <ul class="skills" *ngFor="let j of i.jobSkills">
+                <li class="sname"> {{j}} </li>
+            </ul>
+        </div>
+        </div>   
+     </div>
+     
+     <div class="arrow">
+        <div class="incr"><button (click)="decr()" ><</button></div>
+        <div class="decr"><button (click)="incr()" >></button></div>
+     </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+

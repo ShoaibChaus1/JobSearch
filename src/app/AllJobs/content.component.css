@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100..900&family=Roboto+Slab:wght@200&display=swap');
+
+.main
+{
+    
+    width: 100%;
+    min-height: 100vh;
+   
+   padding: 2vw 0;
+   background: #ebebeb;
+    
+}
+
+.item
+{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5vw;
+   
+}
+
+.item-box
+{
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;
+    border: 2px solid white;
+    box-shadow: 0 0 2vw rgb(218, 218, 218);
+    border-radius: 1vw;
+   background-color: white;
+    width: 46vw;
+    height: 27vh;
+    padding: 2vw;
+    margin: 1vw 2vw;
+    
+    
+}
+
+.sec
+{
+    margin-top: 1.5vw;
+    display: flex;
+    justify-content: flex-start;
+    gap: 3vw;
+    font-family: "Roboto Slab", serif;
+}
+
+.line
+{
+    display: flex;
+    justify-content: center;
+    gap: 0.5vw;
+}
+
+.desc
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.5vw 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-family: "Roboto Slab", serif;
+    font-size: 1vw;
+}
+
+.img img{
+    width: 1vw;
+    margin-right: 0.5vw;
+}
+
+.hr
+{
+    width: 0.1vw;
+    height: 1.8vw;
+    background-color: rgb(223, 219, 219);
+}
+
+.skill
+{
+    display: flex;
+    justify-content: flex-start;
+    gap: 2vw;
+    margin-left: 1.5vw;
+    font-family: "Roboto Slab", serif;
+}
+
+#title
+{
+    font-size: larger;
+    font-weight: 400;
+    font-family: "Roboto Serif", serif;
+    
+}
+#cname
+{
+    font-size: medium;
+    font-weight: 100;
+   
+    
+}
+
+
+.arrow
+{
+   
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5vw;
+    margin-right: 20vw;
+
+   
+}
+
+.arrow button
+
+{
+    background-color: rgb(205, 72, 72);
+    border: 1px solid white;
+    padding:1vw 2vw;
+    
+    cursor: pointer;
+}
+
+@media (max-width:600px) 
+{
+
+    .item-box
+{
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;
+    border: 2px solid white;
+    box-shadow: 0 0 2vw rgb(218, 218, 218);
+    border-radius: 2vw;
+   
+    width: 90%;
+    height:20 ;
+    padding: 2vw;
+    margin: 1vw 2vw;
+    gap: 5px;
+    
+    
+}
+
+.img img{
+    width: 1em;
+    margin-right: 15px;
+}
+
+.skill
+{
+    display: flex;
+    justify-content: flex-start;
+    gap: 2em;
+    margin-left: 1.5vw;
+    font-family: "Roboto Slab", serif;
+}
+
+.desc{
+   font-size: 2.5vw;
+}
+
+
+    
+}

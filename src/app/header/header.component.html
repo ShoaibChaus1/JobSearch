@@ -1,0 +1,36 @@
+<div id="main">
+    <div id="navbar">
+        <nav>
+            <div class="logo">
+                <img [src]="logo" alt="Logo">
+            </div>
+
+            <ul>
+              <div class="offerd">
+                <li (click)="jobs()" ><a routerLink="">Jobs</a></li>
+                <li><a href="">Companies</a></li>
+                <li><a href="">Services</a></li>
+              </div>
+              <div class="search">
+                <input type="text" [(ngModel)]="searchText" (change)="searchJob()" placeholder="Enter Keywords/Companies">
+              </div>
+              <div class="ragister">
+                  <div class="login" [hidden]="ragister">
+                       <li><a style="color: rgb(67, 67, 208);" href="">Login</a></li>
+                  </div>
+                  <div class="ragiter" [hidden]="ragister">
+                       <li><a style="color: white; font-weight: 900;" href="">Ragister</a></li>
+                  </div>
+                  <div id="hr"></div>
+                  <div [hidden]="ragister" (click)="emplr()" class="emplr">
+                    <li><a  routerLink="addJob">For Employeers</a></li>
+                  </div>
+                  
+              </div>
+            </ul>
+            <div class="menu">
+              <p>Menu</p>
+           </div>
+        </nav>
+    </div>
+</div>
